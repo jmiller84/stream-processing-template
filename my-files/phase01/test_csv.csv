@@ -1,1 +1,12 @@
-Hello World!
+id,band_name,fans,formed,origin,split,style
+0,Iron Maiden,4195,1975,United Kingdom,-,"New wave of british heavy,Heavy"
+1,Opeth,4147,1990,Sweden,1990,"Extreme progressive,Progressive rock,Progressive"
+2,Metallica,3712,1981,United States of America,-,"Heavy,Bay area thrash"
+3,Megadeth,3105,1983,United States of America,1983,"Thrash,Heavy,Hard rock"
+4,Amon Amarth,3054,1988,Sweden,-,Melodic death
+5,Slayer,2955,1981,United States of America,1981,Thrash
+6,Death,2690,1983,United States of America,2001,"Progressive death,Death,Progressive thrash"
+7,Dream Theater,2329,1985,United States of America,1985,Progressive
+8,Black Sabbath,2307,1968,United Kingdom,-,"Doom,Heavy,Hard rock"
+9,Nightwish,2183,1996,Finland,1996,"Symphonic power,Gothic,Symphonic"
+10,Children Of Bodom,2153,1993,Finland,-,Extreme power
