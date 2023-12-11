@@ -8,5 +8,15 @@ columns = ["first_name", "last_name", "age"]
 df = spark.createDataFrame(data, columns)
 df.show()
 
-df_from_csv = spark.read.csv("/home/ec2-user/stream-processing-template/my-files/phase01/03_pyspark.py", header=True, inferSchema=True)
+# Read csv file
+df_from_csv = spark.read.csv("/home/ec2-user/stream-processing-template/my-files/phase01/test_csv.csv", header=True, inferSchema=True)
 df_from_csv.show()
+
+# Selecting specific columns
+df.select("first_name", "age").show()
+
+# Filtering data
+df.filter(df["age"] > 25).show()
+
+# Grouping and Aggregating
+df.groupBy("age").count().show()
