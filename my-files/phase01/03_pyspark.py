@@ -25,3 +25,25 @@ df.groupBy("age").count().show()
 df.createOrReplaceTempView("people")
 result = spark.sql("SELECT * FROM people WHERE age > 25")
 result.show()
+
+# Machine Learning with Pyspark MLlib
+from pyspark.ml.regression import LinearRegression
+from pyspark.ml.linalg import Vectors
+from pyspark.ml.feature import VectorAssembler
+
+# Sample data
+data = [(Vectors.dense([0.0]), 1.0),
+        (Vectors.dense([1.0]), 2.0),
+        (Vectors.dense([2.0]), 3.0)]
+
+df = spark.createDataFrame(data, ["features", "label"])
+
+# Linear Regression model
+lr = LinearRegression(maxIter=10, regParam=0.3, elasticNetParam=0.8)
+
+# Fit the model
+lrModel = lr.fit(df)
+
+# Print the coefficients
+print("Coefficients: " + str(lrModel.coefficients))
+print("Intercept: " + str(lrModel.intercept))
