@@ -20,3 +20,8 @@ df.filter(df["age"] > 25).show()
 
 # Grouping and Aggregating
 df.groupBy("age").count().show()
+
+# Using RDDs
+df.createOrReplaceTempView("people")
+result = spark.sql("SELECT * FROM people WHERE age > 25")
+result.show()
